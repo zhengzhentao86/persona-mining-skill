@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{商品名} · 人群匹配表</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:#faf8f5;color:#2b2b2b;line-height:1.7;padding:32px 16px 48px;}
+  .wrap{max-width:1080px;margin:0 auto;}
+  .hero{background:linear-gradient(135deg,#3d332b 0%,#6b5b4d 100%);color:#fff;border-radius:16px;padding:26px 30px;}
+  .hero .brand{font-size:13px;letter-spacing:2px;opacity:.85;font-weight:600;}
+  .hero h1{font-size:25px;margin:6px 0 2px;font-weight:700;}
+  .hero .model{font-size:15px;opacity:.9;}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+  .chip{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:4px 12px;font-size:12.5px;}
+  .how{margin-top:18px;background:#f4f0ea;border-radius:10px;padding:10px 14px;font-size:12.5px;color:#5a5148;}
+  .how b{color:#3d332b;}
+  .sec-title{font-size:17px;font-weight:700;margin:24px 0 10px;color:#3d332b;}
+  .card{background:#fff;border:1px solid #ece7e0;border-radius:12px;padding:16px 18px;box-shadow:0 2px 8px rgba(90,70,50,.05);margin-bottom:12px;}
+  .card-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+  .pname{font-size:16px;font-weight:800;color:#3d332b;}
+  .prio{font-size:12px;font-weight:800;border-radius:8px;padding:3px 10px;color:#fff;}
+  .p-main{background:#c25e3c;} .p-test{background:#2f6bd6;} .p-pending{background:#8a7a68;}
+  .rowline{font-size:13px;color:#4a453f;margin:8px 0;line-height:1.65;}
+  .rowline b{color:#3d332b;}
+  .rowline .lb{display:inline-block;min-width:4.2em;color:#8a8178;font-weight:700;font-size:12.5px;}
+  .bps{display:flex;flex-wrap:wrap;gap:6px;margin:2px 0 8px;}
+  .bp{font-size:12px;border-radius:999px;padding:2px 10px;font-weight:600;}
+  .b-t1{background:#fde8e8;color:#b03535;} .b-t2{background:#e8f0fe;color:#1f4a8a;} .b-t3{background:#ececec;color:#777;}
+  .verified{font-size:12px;color:#8a8178;background:#f4f7fb;border-radius:6px;padding:4px 10px;display:inline-block;}
+  .verified b{color:#1f7a4d;}
+  .scores{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;font-size:12.5px;color:#6f675e;}
+  .score-item{display:flex;align-items:center;gap:6px;}
+  .bar{width:64px;height:7px;border-radius:4px;background:#eee;overflow:hidden;}
+  .bar i{display:block;height:100%;border-radius:4px;background:#c25e3c;}
+  .num{font-weight:700;color:#3d332b;font-size:12.5px;}
+  .lay{font-size:12.5px;color:#6f675e;}
+  .lay b{color:#3d332b;}
+  .next{margin-top:14px;background:#f4f0ea;border-radius:10px;padding:12px 16px;font-size:13px;color:#5a5148;}
+  .next b{color:#3d332b;}
+  .foot{font-size:11.5px;color:#a29a90;margin-top:22px;padding-top:12px;border-top:1px solid #e5dfd6;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="brand">{品牌}</div>
+    <h1>{商品名}</h1>
+    <div class="model">S2 人群匹配表 · 输入 = 上一步买点库</div>
+    <div class="chips">
+      <span class="chip">先打 <b>{主攻人群1}</b></span>
+      <span class="chip">可测试 <b>{可测试人群}</b></span>
+    </div>
+  </div>
+
+  <div class="how"><b>人群怎么来：</b>从 Tier 1/2 买点倒推 + 抖音内容侧核验。每张卡回答：<b>他们是谁</b>（画像+兴趣）、<b>用什么卖点打动</b>、<b>怎么触达</b>。</div>
+
+  <div class="sec-title">N 张人群卡 · 主攻 X / 可测试 Y</div>
+
+  <!-- 每张人群卡复制此块 -->
+  <div class="card">
+    <div class="card-head"><span class="pname">{P-01 人群标签}</span><span class="prio p-main">主攻</span></div>
+    <div class="rowline"><span class="lb">画像</span><b>{年龄区间+身份+生活状态}</b>。兴趣：{刷什么内容、信什么、买同类看什么}。</div>
+    <div class="rowline"><span class="lb">心理</span><b>痛点：</b>{}。<b>动机：</b>{}。<b>顾虑：</b>{对应内容侧负面信号}。</div>
+    <div class="bps"><span class="bp b-t1">BP-xx {买点}</span></div>
+    <div class="rowline"><span class="lb">打动</span>主打 <b>{哪个买点+什么表达角度}</b>。</div>
+    <div class="rowline"><span class="lb">触达</span>{内容形态}；话题 <b>#标签1 #标签2</b>。</div>
+    <span class="verified"><b>✓ 已验证</b> {典型视频标题+互动量}</span>
+    <div class="scores">
+      <div class="score-item">匹配 <div class="bar"><i style="width:90%"></i></div><span class="num">9</span></div>
+      <div class="score-item">付费 <div class="bar"><i style="width:80%"></i></div><span class="num">8</span></div>
+      <div class="score-item">规模 <div class="bar"><i style="width:90%"></i></div><span class="num">9</span></div>
+    </div>
+  </div>
+
+  <div class="sec-title">叠加人群</div>
+  <div class="card">
+    <div class="lay"><b>{叠加人群1}</b>（被哪个买点覆盖）· <b>{叠加人群2}</b></div>
+  </div>
+
+  <div class="next"><b>下一步 S3：</b>用主攻人群 × 主攻买点交叉，生成"具体到能开机就拍"的场景需求卡。</div>
+
+  <div class="foot">由「persona-mining」Skill 生成 · 输入 = 买点库 · 抖音内容侧证据检索于 {日期}</div>
+</div>
+</body>
+</html>
